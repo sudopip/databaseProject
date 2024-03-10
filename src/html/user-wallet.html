@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    ::placeholder{
+        font-size: 24px;
+        color: #DAFFFB;
+    }
+    *{
+        /* margin: 0;
+        padding: 0; */
+        font-size: 28px;
+        font-weight: 500;
+        border: none;
+    }
+    body{
+        direction: rtl;
+        /* background-color: #DAFFFB; */
+        background: linear-gradient(125deg,#DAFFFB,#04364A,#DAFFFB);
+        width: 100%;
+        height: 850px;
+        /* background: radial-gradient(); */
+    }
+    h1{
+        direction: rtl;
+        margin-right: 50px;
+    }
+    .main-1{
+        box-shadow: 0 0 20px rgba(0,0,0,0.2),inset 0 0 8px rgba(0,0,0,0.16);
+        padding: 30px;
+        width: 800px;
+        margin: 0 auto;
+        border-radius: 8px;
+        /* background: transparent; */
+        background-color: rgba(256,256,256,0.3);
+        border: 8px solid transparent;
+        a:link{
+            text-decoration: none;
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        direction: rtl;
+        /* box-shadow: 0 0 10px #000; */
+    }
+    .main img{
+        width: 100px;
+    }
+    .pardatht{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        input{
+            outline: none;
+            width: 300px;
+            height: 50px;
+            border: none;
+            border-bottom: 2px solid #04364A;
+            background-color: transparent;
+            /* border-radius: 16px; */
+        }
+
+        
+    }
+    .pishfarz{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .pishfarz button{
+        width: 200px;
+        height: 50px;
+        margin-top: 40px;
+        background-color: #DAFFFB;
+        border-radius: 16px;
+    }
+    .padakht-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .padakht-btn button{
+        width: 300px;
+        margin-top: 70px;
+        height: 60px;
+        background-color: #04364A;
+        border-radius: 16px;
+        color: #DAFFFB;
+    }
+
+</style>
+<body>
+    <h1>کیف پول</h1>
+<div class="main-1">
+    <div class="main">
+    <img src="./../../img/avatar/bitcoin-cash-money.svg" alt="">
+    <div class="mogodi">
+        <p>موجودی:</p>
+    <p>
+        40,000
+        تومان
+    </p>
+    </div>
+
+    </div>
+
+    <div class="pardatht">
+        <h3>افزایش موجودی</h3>
+        <input type="text" placeholder="پرداخت آنلاین">
+    </div>
+
+    <div class="pishfarz">
+        <!-- <button onclick="click()" id="btn-1">100,000 تومان</button> -->
+        <button onclick="changeBackgroundColor_1()" id="btn-1">100,000 تومان</button>
+        <button onclick="changeBackgroundColor_2()" id="btn-2">200,000 تومان</button>
+        <button onclick="changeBackgroundColor_3()" id="btn-3">300,000 تومان</button>
+        <!-- <button>200,000 تومان</button>
+        <button>300,000 تومان</button> -->
+    </div>
+    <a href="https://sadad.shaparak.ir/Purchase/Index?Token=0001260DB90B833ACBC7EDC74FCB160184E4BDE6269A5A1EDC7D" target="_blank">
+        <div class="padakht-btn">
+        <button>پرداخت</button>
+        </div>
+    </a>
+</div>
+</body>
+</html>
+
+<script>
+    let btn_1 = document.getElementById('btn-1');
+    let btn_2 = document.getElementById('btn-2');
+    let btn_3 = document.getElementById('btn-3');
+function changeBackgroundColor_1() {
+    btn_1.style.border = "3px solid #04364A";
+    btn_2.style.border = "none";
+    btn_3.style.border = "none";
+}
+function changeBackgroundColor_2() {
+    btn_2.style.border = "3px solid #04364A";
+    btn_1.style.border = "none";
+    btn_3.style.border = "none";
+}
+function changeBackgroundColor_3() {
+    btn_3.style.border = "3px solid #04364A";
+    btn_1.style.border = "none";
+    btn_2.style.border = "none";
+}
+</script>

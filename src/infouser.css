@@ -1,0 +1,152 @@
+/* color: #DAFFFB #04364A */
+
+body{
+    background-color: #eee;
+}
+
+
+.header-body{
+    width: 600px;
+    margin: 0 auto;
+}
+.header{
+    /* direction: rtl; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    font-size: 23px;
+}
+.header a{
+    text-decoration: none;
+    color: red;
+}
+.header p{
+    margin-right: 100px;
+}
+#profilepic{
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: right; */
+    padding: 30px;
+    gap: 7px;
+    margin: 0 auto;
+    direction: rtl;
+    font-size: 25px;
+    animation: test-2 7s infinite;
+}
+::placeholder{
+    color:#000;
+    /* margin-bottom: 20px; */
+    position: absolute;
+    top: 0px;
+}
+.infoUser{
+    margin-top: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    background-color: #eee;
+    border-radius: 10px;
+}
+fieldset{
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #ffffff;
+    /* animation-name: test;
+    animation-duration: 3s;    
+    transition: all 1s;
+    animation-iteration-count: infinite; */
+    animation: test 7s infinite ease;
+    background: linear-gradient(to left, #DAFFFB, #04364A);
+}
+.form input{
+    
+    height: 30px;
+    width: 100%;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+    /* Optional styling for better presentation */
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 2px solid #000;
+        border-radius: 5px;
+      }
+  
+      legend {
+        /* font-weight: bold; */
+        color: #333;
+      }
+/* .form input:hover{
+
+    box-shadow:0 0 20px #164863;
+    color: #000;
+} */
+@keyframes test-2{
+    0%{ color: #04364A;}
+    60%{ color: rgb(255,0,0);}
+    100%{ color: #00eeff;}
+}
+@keyframes test{
+    /* 25%{background-color: #102C57;} */
+    /* 60%{background-color: #DAC0A3;} */
+}
+.form-2{
+    margin-top: 20px;
+    box-shadow: 0 0  4px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.main-d{
+    display: flex;
+}
+.main-div{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-color: #000;
+}
+.main-div-2{
+    /* position: absolute; */
+    width: 100px;
+    height: 200px;
+    background-color: #ff0000;
+}
+.main-div:hover{
+    animation: anime 3s infinite ease;
+
+}
+@keyframes anime{
+    50%{transform: translateX(-120px);}
+}
+@keyframes anime-2{
+    50%{transform: translateX(-120px);}
+}
+#but{
+    width:30%;
+    height: 50px;
+    background-color: #df27ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

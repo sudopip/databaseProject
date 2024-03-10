@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sendig data in GET requests</title>
+</head>
+<!-- action="http://127.0.0.1:5000/login/" -->
+<style>
+.hiddenclass{
+    /* display: hidden; */
+    opacity: 0;
+}    
+</style>
+
+<body>
+    <div id="sub" class="p">
+        <form method="POST" action="http://127.0.0.1:5000/login/">
+            <label for="">First Name</label>
+            <input type="text" id="fname" name="firstname"><br>
+            <!-- <label for="">Last Name: </label> -->
+            <!-- <input type="text" id="lname" name="lastname"><br> -->
+            <button type="submit" >Submit</button>
+            <!-- <button class="pop" type="button">mamad</button> -->
+        </form>
+    </div>
+    <div id="data"></div>
+    <!-- <script src="52-ajax.js"></script> -->
+</body>
+
+<!-- <script src="./../js/1.js"></script> -->
+</html>

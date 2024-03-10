@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Define the colors for the wave */
+:root {
+  --wave-color-1: #550053; /* Change this to your desired color */
+  --wave-color-2: #00ffff; /* Change this to your desired color */
+}
+
+.wave {
+  /* Set the height of the wave container */
+  height: 200px;
+  
+  /* Create the wave shape with a linear gradient */
+  background: linear-gradient(
+    125deg,
+    var(--wave-color-1) 10%,
+    var(--wave-color-2) 50%,
+    var(--wave-color-1) 90%
+  );
+  
+  /* Animate the wave */
+  animation: wave 6s ease-in-out infinite alternate;
+  background-size: 300% 300%;
+}
+
+/* Define the wave animation */
+@keyframes wave {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+
+.wave-1{
+    width: 100%;
+    height: 200px;
+    background-color: #00ffff;
+}
+.wave-2{
+    width: 400px;
+    height: 200px;
+    background-color: #00ffff;
+    border-radius: 0 0 300px 0;
+}
+.wave-3{
+    width: 400px;
+    height: 200px;
+    background-color: #00ffff;
+    border-radius: 0 0 0 200px;
+}
+.main{
+    display: flex;
+}
+</style>
+<body>
+    <div class="wave"></div>
+    <div class="wave-1"></div>
+
+    <div class="main">
+    <div class="wave-2"></div>
+    <div class="wave-3"></div>
+</div>
+</body>
+</html>

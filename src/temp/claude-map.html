@@ -1,0 +1,58 @@
+<!-- HTML file for the main page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap with Markers, Polylines, & Directions</title>
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Include the Mapbox API -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <!-- Include Leaflet Routing Machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!-- Create a container for the map -->
+    <div id="map"></div>
+    <!-- Add a search box -->
+    <input type="text" id="searchBox" placeholder="Search for a place">
+</body>
+<script>
+    // JavaScript file for map initialization and functionality
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the map
+    var map = L.map('map').setView([0, 0], 2);
+
+    // Add a tile layer (you can use your preferred provider)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add search functionality
+    var searchBox = L.Control.geocoder().addTo(map);
+
+    // Add a marker for a default location
+    var marker = L.marker([0, 0]).addTo(map);
+
+    // Add a polyline for directions (example)
+    var polyline = L.polyline([[0, 0], [10, 10], [20, 20]]).addTo(map);
+
+    // Set up routing control
+    L.Routing.control({
+        waypoints: [
+            L.latLng(0, 0),
+            L.latLng(10, 10),
+            L.latLng(20, 20)
+        ],
+        routeWhileDragging: true
+    }).addTo(map);
+});
+
+</script>
+</html>

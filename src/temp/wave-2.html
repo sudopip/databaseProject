@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wave {
+  /* Set the width and height of the element */
+  width: 200px;
+  height: 100px;
+  
+  /* Create the wave shape using a mask */
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg"><path d="M 1000 300 l 0 -300 q -165 120 -333 60 t -333 -60 t -334 60 q -166 -120 -333 -60 t -333 60 l 0 300" fill="rgba(0,0,0,1)"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg"><path d="M 1000 300 l 0 -300 q -165 120 -333 60 t -333 -60 t -334 60 q -166 -120 -333 -60 t -333 60 l 0 300" fill="rgba(0,0,0,1)"/></svg>');
+  
+  /* Set the background color (or use an image) */
+  background-color: #0072ff;
+  
+  /* Optionally, animate the wave */
+  animation: wave 5s infinite linear;
+}
+
+/* @keyframes wave {
+  0% {
+    mask-position: 0 0;
+  }
+  100% {
+    mask-position: 1000px 0;
+  }
+} */
+    </style>
+</head>
+<body>
+    <div class="wave"></div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

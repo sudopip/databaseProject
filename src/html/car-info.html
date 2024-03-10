@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+::placeholder{
+    font-size: 20px;
+    color: #000;
+}
+body{
+    background: radial-gradient(#0F1035,#DDF2FD);
+}
+    h1{
+        direction: rtl;
+    }
+    .main{
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        direction: rtl;
+        width: 700px;
+        margin: 0 auto;
+        box-shadow: 0 0 5px #000;
+        background-color: rgba(256,256,256,0.1);
+        color:#DDF2FD;
+    }
+    .main .main-1 input{
+        width: 290px;
+        height: 40px;
+        border-radius: 8px;
+    }
+    
+    .main button{
+        width: 300px;
+        height: 50px;
+        font-size: 24px;
+        background-color: #0F1035;
+        border-radius: 8px;
+        color:#DCF2F1;
+    }
+</style>
+<body>
+    <h1>اطلاعات ماشین</h1>
+    <div class="main">
+        <form action="./pageForDriver.html">
+            <div class="main-1">
+            <p>
+            <label for="model">مدل ماشین</label>
+            </p>
+            <input type="text" name="model" placeholder="مدل ماشین" required>
+            <p>
+            <label for="year">سال تولید</label>
+            </p>
+            <input type="text" name="year" placeholder="سال تولید" required>
+            <p>
+            <label for="color">رنگ ماشین</label>
+            </p>
+            <input type="text" placeholder="رنگ" required>
+            <p>
+            <label for="plqe"> پلاک ماشین</label>
+            </p>
+            <input type="text" name="plqe" placeholder="پلاک" required>
+            <p>
+            <label for="capacity">ظرفیت ماشین</label>
+            </p>
+            <input type="text" name="capacity" placeholder="حداکثر تعداد نفراتی که می تواند سوار کند" required>
+            <p>
+            </div>
+            <label for="type_quel">نوع سوخت</label>
+            </p>
+            <input type="radio" name="type_quel" required>
+            <label for="type_quel">گاز سوز</label>
+
+            <input type="radio" name="type_quel" required>
+            <label for="type_quel">بنزین سوز</label>
+
+            <input type="radio" name="type_quel" required>
+            <label for="type_quel">دوگانه سوز</label>
+            <p>
+            <label for="image">عکس خود را آپلود کنید.</label>
+            </p>
+            <input type="file" name="image" id="file" required>
+            <p>
+                <input type="checkbox" name="women" >
+            <label for="women">جنسینت من زن است و می خواهم در بکسی بانوان فعالیت کنم</label>
+            </p>
+            <p>
+            <button type="submit">ثبت</button>
+            </p>
+        </form>
+    </div>
+    
+</body>
+</html>

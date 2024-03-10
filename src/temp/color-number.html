@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.number {
+  font-family: 'Montserrat', sans-serif; /* Use a fancy font */
+  font-size: 48px;
+  font-weight: bold;
+  color: #333; /* Change the color to your preference */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  position: relative;
+  padding: 10px 20px;
+}
+
+.number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #ff9966, #ff5e62); /* Customize the gradient colors */
+  z-index: -1;
+  border-radius: 10px; /* Add rounded corners */
+  transform: skewX(-10deg); /* Add a skew effect */
+}
+.number-1 {
+  font-family: 'Montserrat', sans-serif; /* Set the font family */
+  font-size: 48px; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+  /* color: #ff6347; Set the color (Tomato) */
+  color: linear-gradient(
+        #DAFFFB,
+        #64CCC5,
+        #DAFFFB
+      );
+}
+.number-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff6347, #ff1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.number-3 {
+  -webkit-background-clip: text; /* WebKit-based browsers (Chrome, Safari) */
+     -moz-background-clip: text; /* Mozilla-based browsers (Firefox) */
+          background-clip: text; /* Standard property for modern browsers */
+}
+.number-3 {
+    /* -webkit-background-clip: text; WebKit-based browsers (Chrome, Safari) */
+     /* -moz-background-clip: text; Mozilla-based browsers (Firefox) */
+          background-clip: text;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  background: radial-gradient(circle, #ff6347, #ff1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+<body>
+    <div class="number-container">
+        <span class="number">42</span>
+      </div>
+      <span class="number-3">42</span>
+</body>
+</html>

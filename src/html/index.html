@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baxi</title>
+    <link rel="stylesheet" href="./../css/index.css">
+</head>
+<style>
+        @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .main-section a{
+      /* display: inline-block; */
+      animation: slideIn 1s ease-out; /* Adjust the duration and timing function as needed */
+    }
+
+
+    .main-test{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 30px;
+        /* background-color: #F8F0E5; */
+        /* gap: 5px; */
+        
+    }
+    
+    .main-test-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+        /* background-color: #F8F0E5; */
+        border-radius: 20px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        color:#176B87 ;
+    }
+    .main-test div{
+        font-size: 50px;
+    }
+
+
+
+</style>
+<body>
+    <header>
+        <div class="header-btn">
+            <a href="./user-login.html"><p>ثبت نام/ورود کاربر</p></a>
+            <a href="./driver-login.html"><p>ثبت نام / ورود رانندگان</p></a>
+            <a href="./employee-login.html"><p>ورود کارمندان</p></a>
+            <img src="./../../img/batman.png" alt="">
+            <!-- <img src="./../../img/batman.png" alt=""> -->
+        </div>
+        <section class="header-section">
+            <div class="section-hero-1">
+                <h1>بکسی همه جا</h1>
+                <!-- <h1>Baxi</h1> -->
+                <h2>تجربه سفری هیجان انگیز با بکسی</h2>
+            </div>
+            <div class="section-hero-2">
+                <!-- <img src="./../../img/_f36691f1-c0f0-4d4b-a802-06cbab7681ac-removebg-preview.png" alt=""> -->
+                <img src="./../../img/batman-car.png" alt="">
+            </div>
+        </section>
+    </header>
+    <hr>
+    <!-- wave -->
+
+
+
+    <!-- test -->
+    <div class="main-test">
+        <div class="main-test-1">
+            <p>رضایت شما</p>
+            <div class="test" id="number-1">00</div>
+        </div>
+
+        <div class="main-test-1">
+            <p>تعداد رانندگان</p>
+            <div class="test" id="number-2">00</div>
+        </div>
+
+        <div class="main-test-1">
+            <p>تعداد یوزر های فعال</p>
+            <div class="test" id="number-3">00</div>
+        </div>
+    </div>
+
+    <!-- <img src="./../../img/batman.png" alt=""> -->
+
+
+    <main>
+        <section class="main-section">
+            <div class="main-section-1">
+                <a href="./user-login.html">
+                <div class="main-section-1-1">
+                    <img src="./../../img/man-truck/male-avatar-svgrepo-com.svg" alt="">
+                    <span>درخواست سفر</span>
+                </div>
+                </a>
+                <a href="./user-login.html">
+                <div class="main-section-1-1">
+                    <img src="./../../img/man-truck/female-avatar-svgrepo-com.svg" alt="" >
+                    <span>بکسی بانوان</span>
+                </div>
+                </a>
+            </div>
+        <div class="main-section-1">
+            <a href="./user-login.html">
+                <div class="main-section-1-1">
+                    <img src="./../../img/man-truck/Pictogrammers-Material-Dump-truck.svg">
+                    <!-- <img src="./../../img/man-truck/vecteezy_motorcycle-vector-silhouette-illustration-black-color-motor_24663884.eps"> -->
+                    <span>بکسی بار</span>
+                </div>
+            </a>
+            <a href="./user-login.html">
+                <div class="main-section-1-1">
+                    <img src="./../../img/avatar/box.png" alt="">
+                    <span>بکسی باکس</span>
+                </div>
+            </a>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="main-footer">
+            <a href="./../html/about.html">درباره ما</a>
+            <a href="./../html/phone.html">تماس با ما</a>
+        </div>
+    </footer>
+</body>
+
+
+<script>
+    let number_1 = document.querySelector('#number-1');
+    let numberin_1;
+    function test1() {
+        numberin_1 = parseInt(number_1.innerText)
+        numberin_1 += 1;
+        if(numberin_1 < 10)
+        {
+            numberin_1 =  '0' + numberin_1;
+        }
+        numberin_1 = numberin_1 + '%';
+        number_1.innerHTML = numberin_1;
+        if(parseInt(numberin_1) > 96)
+        {
+            clearInterval(intervalId_1);
+        }
+    }
+    const intervalId_1 =  setInterval(test1,80);
+
+    let number_2 = document.querySelector('#number-2');
+    let numberin_2;
+    function test2() {
+        numberin_2 = parseInt(number_2.innerText)
+        numberin_2 += 1;
+        if(numberin_2 < 10)
+        {
+            numberin_2 =  '0' + numberin_2;
+        }
+        // numberin_2 = numberin_2 + '%';
+        number_2.innerHTML = numberin_2;
+        if(parseInt(numberin_2) > 200)
+        {
+            clearInterval(intervalId_2);
+        }
+    }
+    const intervalId_2 =  setInterval(test2,80);
+
+    let number_3 = document.querySelector('#number-3');
+    let numberin_3;
+    function test3() {
+        numberin_3 = parseInt(number_3.innerText)
+        numberin_3 += 1;
+        if(numberin_3 < 10)
+        {
+            numberin_3 =  '0' + numberin_3;
+        }
+        // numberin_3 = numberin_3 + '%';
+        number_3.innerHTML = numberin_3;
+        if(parseInt(numberin_3) > 500)
+        {
+            clearInterval(intervalId_3);
+        }
+    }
+    const intervalId_3 =  setInterval(test3,40);
+
+</script>
+
+
+</html>

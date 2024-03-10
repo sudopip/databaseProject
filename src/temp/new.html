@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container .form .inputBox input:focus ~ span {
+  /* Styles for the success message/icon */
+  color: green;
+  display: inline;
+  transform: translateX(50px) translateY(40px);
+  transition: all 2s;
+}
+.container .form .inputBox input{
+    position: absolute;
+    /* z-index: 2; */
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="form">
+          <div class="inputBox">
+            <input type="text" required>
+            <span>Success message</span>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

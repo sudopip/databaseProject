@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Animation on Screen</title>
+    <style>
+/* CSS */
+.animated-element {
+    margin-top: 900px;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.animated-element.slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <!-- The element to be animated -->
+<!-- HTML -->
+<div class="animated-element">This is an animated element.</div>
+
+
+<script>
+    const animatedElement = document.querySelector('.animated-element');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animatedElement.classList.add('slide-in');
+      observer.unobserve(animatedElement); // Stop observing once it's in view
+    }
+  });
+});
+
+observer.observe(animatedElement);
+</script>
+
+</body>
+</html>
